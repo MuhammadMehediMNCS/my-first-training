@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 
-import 'Pages/One.dart';
+import 'pages/one.dart';
 
 class combined extends StatelessWidget {
   const combined({ Key? key }) : super(key: key);

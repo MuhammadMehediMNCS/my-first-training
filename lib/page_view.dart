@@ -1,10 +1,10 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
-import 'Pages/Four.dart';
-import 'Pages/One.dart';
-import 'Pages/Three.dart';
-import 'Pages/Two.dart';
+import 'pages/four.dart';
+import 'pages/one.dart';
+import 'pages/three.dart';
+import 'pages/two.dart';
 
 class pages extends StatelessWidget {
   const pages({Key? key}) : super(key: key);

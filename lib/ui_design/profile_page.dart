@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:my_practice/UI%20Design/profile_widget.dart';
-import 'package:my_practice/UI%20Design/user.dart';
-import 'package:my_practice/UI%20Design/user_preferrences.dart';
+import 'package:my_first_practice/ui_design/profile_widget.dart';
+import 'package:my_first_practice/ui_design/user.dart';
+import 'package:my_first_practice/ui_design/user_preferrences.dart';
 
 import 'appbar_widget.dart';
 import 'button_widget.dart';

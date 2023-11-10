@@ -6,7 +6,7 @@ class transfor extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: trans_widget(),
     );
   }
@@ -29,7 +29,7 @@ class _trans_widgetState extends State<trans_widget> {
           height: 400,
           width: 400,
           color: Colors.lightGreenAccent,
-          child: Center(child: Text("Transform Widget")),
+          child: const Center(child: Text("Transform Widget")),
         ),
       ),
     ));

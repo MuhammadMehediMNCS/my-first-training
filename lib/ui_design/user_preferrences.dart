@@ -1,4 +1,5 @@
-import 'package:my_practice/UI%20Design/user.dart';
+import 'package:my_first_practice/ui_design/user.dart';
+
 
 class UserPreferences {
   static const myUser = User(

@@ -7,7 +7,7 @@ class Curv_widget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       
       home: Curv_nav(),
     );
@@ -35,17 +35,17 @@ class _Curv_navState extends State<Curv_nav> {
             extendBody: true,
             backgroundColor: Colors.orange,
             appBar: AppBar(
-              title: Text('Curved Navigation Bar'),
+              title: const Text('Curved Navigation Bar'),
               centerTitle: true,
             ),
             body: Center(
-              child: Text("$index", style: TextStyle(
+              child: Text("$index", style: const TextStyle(
                 color: Colors.white, fontSize: 120, fontWeight: FontWeight.bold),
               ),
             ),
             bottomNavigationBar: Theme(
               data: Theme.of(context).copyWith(
-                iconTheme: IconThemeData(color: Colors.white),
+                iconTheme: const IconThemeData(color: Colors.white),
               ),
               child: CurvedNavigationBar(
                 index: index,
@@ -54,8 +54,8 @@ class _Curv_navState extends State<Curv_nav> {
                 buttonBackgroundColor: Colors.purple.shade300,
                 height: 60,
                 animationCurve: Curves.easeInOut,
-                animationDuration: Duration(milliseconds: 300),
-                items: [Icon(Icons.home, size: 30),
+                animationDuration: const Duration(milliseconds: 300),
+                items: const [Icon(Icons.home, size: 30),
                 Icon(Icons.search, size: 30),
                 Icon(Icons.favorite, size: 30),
                 Icon(Icons.settings, size: 30),

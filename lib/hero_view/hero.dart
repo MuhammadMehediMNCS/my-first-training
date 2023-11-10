@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-
-import 'Hero two.dart';
+import 'package:my_first_practice/hero_view/hero_two.dart';
 
 class heroScreen1 extends StatelessWidget {
   const heroScreen1({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: screen_one(),
     );
   }
@@ -37,7 +36,7 @@ class _screen_oneState extends State<screen_one> {
               tag: "Mehedi",
               child: GridView.count(
                 crossAxisCount: 3,
-                children: [
+                children: const [
                   Icon(Icons.add_a_photo, size: 60.0),
                   Icon(Icons.favorite, size: 60.0),
                   Icon(Icons.mail, size: 60.0),
@@ -47,7 +46,7 @@ class _screen_oneState extends State<screen_one> {
             ),
             onTap: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => heroScreen2()));
+                  MaterialPageRoute(builder: (context) => const heroScreen2()));
             },
           ),
         ),

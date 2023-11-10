@@ -5,7 +5,7 @@ class DismissMessage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: dismiss_widget(),
     );
   }
@@ -25,76 +25,76 @@ class _dismiss_widgetState extends State<dismiss_widget> {
       body: ListView(
         children: [
           Dismissible(
-              key: ValueKey('M'),
+              key: const ValueKey('M'),
               background: Container(
                 color: Colors.amber[200],
-                child: Icon(
+                child: const Icon(
                   Icons.delete_outline_outlined,
                   size: 35,
                 ),
               ),
               secondaryBackground: Container(
                 color: Colors.blueGrey[200],
-                child: Icon(
+                child: const Icon(
                   Icons.delete_outline_outlined,
                   size: 35,
                 ),
               ),
-              child: ListTile(
+              child: const ListTile(
                 title: Text("Today is Your Birthday"),
                 trailing: Icon(Icons.wb_twilight_sharp),
               )),
           Dismissible(
-              key: ValueKey('M'),
+              key: const ValueKey('M'),
               background: Container(
                 color: Colors.amber[200],
-                child: Icon(
+                child: const Icon(
                   Icons.delete_outline_outlined,
                   size: 35,
                 ),
               ),
               secondaryBackground: Container(
                 color: Colors.blueGrey[200],
-                child: Icon(
+                child: const Icon(
                   Icons.delete_outline_outlined,
                   size: 35,
                 ),
               ),
-              child: ListTile(
+              child: const ListTile(
                 title: Text("Today is Your Birthday"),
                 trailing: Icon(Icons.wb_twilight_sharp),
               )),
           Dismissible(
-              key: ValueKey('M'),
+              key: const ValueKey('M'),
               background: Container(
                 color: Colors.amber[200],
-                child: Icon(
+                child: const Icon(
                   Icons.delete_outline_outlined,
                   size: 35,
                 ),
               ),
               secondaryBackground: Container(
                 color: Colors.blueGrey[200],
-                child: Icon(
+                child: const Icon(
                   Icons.delete_outline_outlined,
                   size: 35,
                 ),
               ),
-              child: ListTile(
+              child: const ListTile(
                 title: Text("Today is Your Birthday"),
                 trailing: Icon(Icons.wb_twilight_sharp),
               )),
               Dismissible(
-            key: ValueKey('M'),
+            key: const ValueKey('M'),
             background: Container(
               color: Colors.amber[200],
-              child: Icon(Icons.delete_outline_outlined, size: 35,),
+              child: const Icon(Icons.delete_outline_outlined, size: 35,),
             ),
             secondaryBackground: Container(
               color: Colors.blueGrey[200],
-              child: Icon(Icons.delete_outline_outlined, size: 35,),
+              child: const Icon(Icons.delete_outline_outlined, size: 35,),
             ),
-            child: ListTile(
+            child: const ListTile(
               title: Text("Today is Your Birthday"),
               trailing: Icon(Icons.wb_twilight_sharp),
             )),

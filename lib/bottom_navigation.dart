@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 
-class navigationBar_widget extends StatelessWidget {
-  const navigationBar_widget ({ Key? key }) : super(key: key);
+class NavigationWidget extends StatelessWidget {
+  final title = 'Flutter Developer';
+
+  const NavigationWidget ({ Key? key }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final title = 'Flutter Developer';
-
     return MaterialApp(
       title: title,
       theme: ThemeData(
         primarySwatch: Colors.green
       ),
-      home: MyNavigation(),
+      home: const MyNavigation(),
     );
   }
 }
@@ -26,31 +26,40 @@ class MyNavigation extends StatefulWidget {
 
 class _MyNavigationState extends State<MyNavigation> {
   //List<String> _titles = ["Home", "Profile", "Shop"];
-  List<Widget> _items = [
-    Text('Index 0: Home'),
-    Text('Index 1: Profile'),
-    Text('Index 2: Shop'),
+  final List<Widget> _items = [
+    const Text('Index 0: Home'),
+    const Text('Index 1: Profile'),
+    const Text('Index 2: Shop'),
   ];
   int _selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Flutter Devloper"),
-      ),
-      body: Center(
-        child: IndexedStack(
-          index: _selectedIndex,
-          children: _items,
+    return WillPopScope(
+      onWillPop: () async {
+        setState(() {
+          _selectedIndex = 1;
+        });
+
+        return false;
+      },
+      child: Scaffold(
+        appBar: AppBar(
+          title: const Text("Flutter Devloper"),
         ),
+        body: Center(
+          child: IndexedStack(
+            index: _selectedIndex,
+            children: _items,
+          ),
+        ),
+        bottomNavigationBar: _showBottomNav(),
       ),
-      bottomNavigationBar: _showBottomNav(),
     );
   }
   Widget _showBottomNav() {
     return BottomNavigationBar(
-      items: [
+      items: const [
         BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
         BottomNavigationBarItem(icon: Icon(Icons.account_circle), label: 'Profile'),
         BottomNavigationBarItem(icon: Icon(Icons.shopping_bag), label: 'Shop'),
@@ -66,13 +75,12 @@ class _MyNavigationState extends State<MyNavigation> {
       selectedFontSize: 20,
       unselectedFontSize: 15,
       //showSelectedLabels: false,
-      //showUnselectedLabels: false,
+      showUnselectedLabels: false,
       );
   }
   void _onTap (int index) {
-    _selectedIndex = index;
     setState(() {
-      
+      _selectedIndex = index;
     });
   }
 }
